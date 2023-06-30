@@ -1,6 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
+//const mongoose = require('mongoose');
+//const { MongoMemoryServer } = require('mongodb-memory-server');
 const connect = require('./con');
 
 const app = express();
@@ -11,7 +11,9 @@ app.use(express.json());
 
 // Import routes
 const usersRoutes = require('./route/usersRoutes');
+
 const guriyahaRoutes = require('./route/guriyahaRoutes');
+
 const imagesRoutes = require('./route/imagesRoutes');
 const xogtaShirkadaRoutes = require('./route/xogtaShirkadaRoutes');
 const aboutRoutes = require('./route/aboutRoutes');
@@ -19,14 +21,14 @@ const contactFormRoutes = require('./route/contactFormRoutes');
 
 // Db Connection
 connect()
-.then(() => {
-  app.listen(4000, () => {
-    console.log(`Server is listening on port 4000`);
-  });
-})
-.catch((error) => {
-  console.log("Invalid Database Connection!!!!", error);
-});
+    .then(() => {
+        app.listen(4000, () => {
+            console.log('Server is listening on port 4000');
+        });
+    })
+    .catch((error) => {
+        console.log('Invalid Database Connection!!!!', error);
+    });
 
   
 
