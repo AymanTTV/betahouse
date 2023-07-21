@@ -1,3 +1,5 @@
+// guriyahaModel.js
+
 const mongoose = require('mongoose');
 
 const guriyahaSchema = new mongoose.Schema({
@@ -13,12 +15,15 @@ const guriyahaSchema = new mongoose.Schema({
   rent: String,
   deposit: String,
   parking: String,
-  imagesPreview: [String],
   isAvailable: String,
   rooms: String,
   musqulaha: String,
   masterRoom: String,
   faahfaahin: String,
+  imagepreview: {
+    data: Buffer,
+    contentType: String,
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

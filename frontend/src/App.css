@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+  background-color: var(--dark-alt);
+  color: var(--light);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body, html{
+  background-color: var(--dark-alt);
+  color: var(--light);
+}
+
+/* App.css */
+
+/* Style the house sample section */
+.house-sample {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.house-sample img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.house-sample h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.house-sample p {
+  font-size: 16px;
+  color: var(--light);
+}
+
+/* Style the "View All Houses" button */
+.house-sample .btn-primary {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+/* Adjust the overall layout and background */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--light);
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 18px;
+  color: var(--light);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .nav-link {
+    margin-right: 10px;
+  }
+
+  .house-sample img {
+    width: 100%;
+    height: auto;
+  }
+}
+

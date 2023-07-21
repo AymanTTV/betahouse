@@ -3,7 +3,27 @@ const Guriyaha = require('../models/guriyahaModel');
 // POST
 exports.createGuriyaha = async (req, res) => {
   try {
-    const guriyaha = new Guriyaha(req.body);
+    const { type, area, address, age, rent, deposit, parking, isAvailable, rooms, musqulaha, masterRoom, faahfaahin, user } = req.body;
+    const guriyaha = new Guriyaha({
+      type,
+      area,
+      address,
+      age,
+      rent,
+      deposit,
+      parking,
+      isAvailable,
+      rooms,
+      musqulaha,
+      masterRoom,
+      faahfaahin,
+      user,
+      imagepreview: {
+        data: req.file ? req.file.buffer : null,
+        contentType: req.file ? req.file.mimetype : null,
+      },
+    });
+
     const savedGuriyaha = await guriyaha.save();
     res.json(savedGuriyaha);
   } catch (error) {
@@ -11,6 +31,7 @@ exports.createGuriyaha = async (req, res) => {
     res.status(500).send('Error creating guriyaha');
   }
 };
+
 
 // PUT
 exports.updateGuriyaha = async (req, res) => {
