@@ -80,7 +80,7 @@ const Home = () => {
           <Col md={6}>
             <div className="house-sample">
               <img
-                src="../dependencies/2floor.jpeg"
+                src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt="House Sample"
               />
               <h3>Second House</h3>
@@ -94,7 +94,7 @@ const Home = () => {
           <Col md={6}>
             <div className="house-sample">
               <img
-                src="../dependencies/3floor.jpeg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH-HiVNkelrez-CwEhpsK9_WpzXl_PpBs6H0kxnv22eQ&s"
                 alt="House Sample"
               />
               <h3>First House</h3>
